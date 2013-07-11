@@ -4,10 +4,10 @@ session_start();
 if(!isset($_SESSION['username'])){
     header("location:main_login.php");
 }?>
-<html><html>
+<html>
     <head>
   <meta charset="utf-8" />
-  <title>Add Music News</title>
+  <title>Add Film Text</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
@@ -43,7 +43,8 @@ if(!isset($_SESSION['username'])){
        </table>
       </form>
        <?php
-    }else{
+    }
+    else{
       $id_query = "SELECT max(film_id) as max_id from film_text";
       $id_result = mysql_query($id_query);
       $row = mysql_fetch_array($id_result);
@@ -59,7 +60,6 @@ if(!isset($_SESSION['username'])){
       echo "row inserted";
       else
       echo "row not inserted".mysql_error();
-
       }
     ?>
   </body>

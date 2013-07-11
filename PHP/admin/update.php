@@ -7,7 +7,7 @@ if(!isset($_SESSION['username'])){
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Update Music News</title>
+  <title>Update Film Text</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
@@ -22,16 +22,16 @@ if(!isset($_SESSION['username'])){
     if($_POST["update"]==0){?>
     
         <form action="update.php" method="post">
-        <table>
-        <tr>
-        <td>Enter Id:</td>
-        <td><input type="text" name="id"/>
-        <input type="hidden" name="update" value="1"/></td>
-        </tr>
-        <tr>
-        <td><input type="submit" value="Update"/></td>
-        </tr>
-        </table>
+            <table>
+                <tr>
+                    <td>Enter Id:</td>
+                    <td><input type="text" name="id"/>
+                    <input type="hidden" name="update" value="1"/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Update"/></td>
+                </tr>
+            </table>
         </form> <?php }
     else if ($_POST["update"]==1){
         $result = mysql_query("SELECT * FROM film_text where film_id=".$_POST["id"]);
@@ -51,8 +51,9 @@ if(!isset($_SESSION['username'])){
                     </tr>
                     <tr>
                         <td>
-                     <?php     echo('<input type="hidden" name="id" value="'.$row['film_id'].'"/>');?>
-                        <input type="hidden" name="update" value="2"/></td>
+                         <?php     echo('<input type="hidden" name="id" value="'.$row['film_id'].'"/>');?>
+                        <input type="hidden" name="update" value="2"/>
+                        </td>
                     </tr>                           
                     <tr>
                         <td><input type="submit" value="Update"/></td>

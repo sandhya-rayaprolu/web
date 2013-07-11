@@ -8,9 +8,10 @@
   echo("<table><tr><td>Id</td><td>Title</td><td>Description</td></tr>");
   while($row = mysql_fetch_array($result)) {
     echo("<tr>");
-    echo("<td>".$row['film_id']."</td>");
-    echo("<td>".$row['title']."</td>");
-    echo("<td>".$row['description']."</td>");
+        echo("<td>".$row['film_id']."</td>");
+        echo("<td>".$row['title']."</td>");
+        echo("<td>".$row['description']."</td>");
     echo("</tr>");
   }
+   echo("</table>");
   ?>

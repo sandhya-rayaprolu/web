@@ -4,7 +4,7 @@ if(!isset($_SESSION['username'])){
     header("location:main_login.php");
 }?>
 <html>
-    <title>Music News</title>
+    <title>Film Text</title>
     <body>
         <a href="select.php">Select</a><br />
         <a href="add.php">Add</a><br />

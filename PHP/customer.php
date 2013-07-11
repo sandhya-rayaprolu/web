@@ -21,36 +21,22 @@ if(mysql_num_rows($result)!=0){
 	while ($row = mysql_fetch_array($result,MYSQL_ASSOC))
 	{
 	?>
-	<table>
-	<tr>
-		<td>
-		<table style="width: 100%" cellpadding="0" cellspacing="0">
-			<tr>
-				<td>
-				<table style="width: 100%" cellpadding="0" cellspacing="0">
-					<tr>
-						<td><?php echo $row["first_name"]." ".$row["last_name"]; ?></td>
-					</tr>
-					<tr>
-						<td>last updated <?php echo date("l, F j, Y",strtotime($row["payment_date"])); ?></td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-		</table>
-		</td>
-	</tr>
+        <table style="width: 100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td><?php echo $row["first_name"]." ".$row["last_name"]; ?></td>
+            </tr>
+            <tr>
+                <td>last updated <?php echo date("l, F j, Y",strtotime($row["payment_date"])); ?></td>
+            </tr>
+        </table>
 	<?php
 	}
 }else
-echo "No Customer Payments For The Selected Month";
+    echo "No Customer Payments For The Selected Month";
 ?>
-<tr>
-	<td>
-	<div><h2>Customer Payment By Month</h2></div>
-	
-	<div style="margin-top: 10px; margin-bottom: 10px;">
-	<!--Pagination links-->
+
+	<h2>Customer Payment By Month</h2>
+    <!--Pagination links-->
 	<?php
 	$date=$arr_max_date['max_date'];
 	// display the link for the current month customer
@@ -63,9 +49,5 @@ echo "No Customer Payments For The Selected Month";
 	}
 	?>
 	<!--End Pagination links-->
-	</div>
-	</td>
-</tr>
-</table>
 
 
