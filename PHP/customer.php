@@ -1,12 +1,11 @@
+<?php include("mysql.php"); 
 /********************************************************************************
 This file displays a list of customers paginated by month on payment date. 
 This uses the customer and payment tables.
 The default behaviour is to display data from the latest month in the database. 
 User can choose other months using links at the bottom of the page.
 The links are all the way down, below all the data displayed on the page.
-*********************************************************************************/
-<?php include("mysql.php"); 
-														
+*********************************************************************************/														
 /* Pagination to display customer payments per month on one page */
 
 $result_max_date = mysql_query("SELECT max(payment_date) as max_date from payment");

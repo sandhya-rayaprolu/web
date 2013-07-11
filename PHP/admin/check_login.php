@@ -1,11 +1,9 @@
+<?php include("../mysql.php");
 /**************************************************************************************************************
 This file checks the validity of the username/password, it checks if the username is present in the staff table
 It redirects to the login form again if the username/password is not valid.
 If the username/password is valid, it takes the user to index.php, where he can select the operation.
 ***************************************************************************************************************/
-
-<?php include("../mysql.php");
-
 ob_start();
 
 $username=$_POST['username']; 

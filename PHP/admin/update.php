@@ -1,10 +1,10 @@
+<a href="index.php">Home</a>
+<?php include("../mysql.php");
 /*************************************************************************************************************
 Updates a row from the table by id. User can select an id, existing data in the table for that id is displayed.
 User can edit that data and when the form is submitted, the row is updated. 
 Removed the date field because film_text does not have a date field.
 **************************************************************************************************************/
-<a href="index.php">Home</a>
-<?php include("../mysql.php");
 session_start();
 if(!isset($_SESSION['username'])){
     header("location:main_login.php");

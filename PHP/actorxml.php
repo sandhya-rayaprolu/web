@@ -1,8 +1,7 @@
+<?php  include("mysql.php");
 /*******************************************************************
 This file outputs the data in the actor table as XML to the browser.
 ********************************************************************/
-
-<?php  include("mysql.php");
 header('Content-type: application/xml');
 mysql_set_charset('utf8');
     $i=0;// for SortOrder

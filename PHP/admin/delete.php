@@ -1,8 +1,8 @@
+<a href="index.php">Home</a>
+<?php include("../mysql.php");
 /******************************************
 Deletes a row from the table based on id.
 *******************************************/
-<a href="index.php">Home</a>
-<?php include("../mysql.php");
 session_start();
 if(!isset($_SESSION['username'])){
     header("location:main_login.php");

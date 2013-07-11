@@ -1,7 +1,7 @@
-/********************************************************************************************************
+<!--/********************************************************************************************************
 This file is the login screen. It sends the data submitted in the form to check_login.php.
 It displays an error message and displays the login form again if the username/password is not valid.
-*********************************************************************************************************/
+*********************************************************************************************************/-->
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <form name="form1" method="post" action="check_login.php">

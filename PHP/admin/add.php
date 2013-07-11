@@ -1,10 +1,10 @@
+<a href="index.php">Home</a>
+<?php include("../mysql.php");
 /*************************************************************************************************************
 Adds a row to the table, with the user entered data. The id field does not need to be entered by the user.
 The maximum id in the table is incremented and the row is added.
 It was using a datepicker to add a date for other data, removed it since film_text does not have a date field
 ***************************************************************************************************************/
-<a href="index.php">Home</a>
-<?php include("../mysql.php");
 session_start();
 if(!isset($_SESSION['username'])){
     header("location:main_login.php");

@@ -1,8 +1,8 @@
+<a href="index.php">Home</a>
+<?php include("../mysql.php");
 /*************************************************
 Displays all the data in the film_text table.
 **************************************************/
-<a href="index.php">Home</a>
-<?php include("../mysql.php");
   if($_GET["id"]!=null){
     $result = mysql_query("SELECT * FROM film_text where film_id=".$_GET["id"]);
   }
