@@ -1,3 +1,6 @@
+/*************************************************
+Displays all the data in the film_text table.
+**************************************************/
 <a href="index.php">Home</a>
 <?php include("../mysql.php");
   if($_GET["id"]!=null){
@@ -5,7 +8,7 @@
   }
   else
     $result = mysql_query("SELECT * FROM film_text");
-  echo("<table><tr><td>Id</td><td>Title</td><td>Description</td></tr>");
+  echo("<table border="1"><tr><td>Id</td><td>Title</td><td>Description</td></tr>");
   while($row = mysql_fetch_array($result)) {
     echo("<tr>");
         echo("<td>".$row['film_id']."</td>");
